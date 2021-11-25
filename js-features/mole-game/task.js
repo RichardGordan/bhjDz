@@ -7,12 +7,12 @@ return holeClick
 
     }
 
-  let hole = getHole(index);
-holeBaber.onclick = function(){
-    if(hole.className.includes( 'hole_has-mole' ) === true){
-        dead.textContent += 1;
+  let holeBaber = getHole(index);
+holeBaber.onclick = function() {
+    if(holeBaber.className.includes( 'hole_has-mole' ) === true){
+        dead.textContent ++;
     }else{
-        lost.textContent += 1;
+        lost.textContent ++;
     }
     console.log(dead.textContent);
     if(dead.textContent === 10){
@@ -20,10 +20,12 @@ holeBaber.onclick = function(){
         dead.textContent = 0;
         lost.textContent = 0;
     }else if(lost.textContent === 5){
-        alert('You lose');
+        getDead();
+    }
+function getDead(alertText) {
+        alert(alertText);
         dead.textContent = 0;
         lost.textContent = 0;
     }
-
 }
 };

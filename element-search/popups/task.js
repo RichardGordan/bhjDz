@@ -11,3 +11,8 @@ showSuccess.addEventListener('click',(e) => {
     modalSuccess.classList.toggle('modal_active');
     modalMain.classList.remove('modal_active');
 })
+const modalSucClose = modalSuccess.querySelector('.modal__close_times');
+modalSucClose.addEventListener('click',function(){
+    modalSuccess.classList.remove('modal_active');
+})
+ 
